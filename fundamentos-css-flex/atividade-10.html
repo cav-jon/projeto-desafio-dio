@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Flex</title>
+    <style>
+        .flex-container {
+            display: flex;
+            border: 1px solid black;
+            max-width: 400px;
+        }
+        .item {
+            background-color: saddlebrown;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            margin: 2px;
+        }
+        .f-1{
+            flex: 1;
+        }
+        .w {
+            width: 200px;
+        }
+        .f-2{
+            flex: 2;
+            background-color: sandybrown;
+        }
+    </style>
+</head>
+<body>
+    <p>flex: 1</p>
+    <div class="flex-container">
+        <div class="item f-1">A</div>
+        <div class="item f-1">BBBBB</div>
+        <div class="item f-1">C</div>
+        <div class="item f-1">DEFG</div>
+        <div class="item f-1">EFGHIJK</div>
+    </div>
+    <p>flex: mix</p>
+    <div class="flex-container">
+        <div class="item f-1">A</div>
+        <div class="item f-2">BBBBB</div>
+        <div class="item f-1">C</div>
+        <div class="item f-2">DEFG</div>
+        <div class="item f-1">EFGHIJK</div>
+    </div>
+    <p>no-width -> basis:0</p>
+    <div class="flex-container">
+        <div class="item f-1 w">A</div>
+        <div class="item f-1 w">BBBBB</div>
+        <div class="item f-1 w">C</div>
+        <div class="item f-1 w">DEFG</div>
+        <div class="item f-1 w">EFGHIJK</div>
+    </div>
+</body>
+</html>

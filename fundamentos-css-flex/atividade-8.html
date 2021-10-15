@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Flex-basis</title>
+    <style>
+        .flex-container {
+            max-width: 500px;
+            border: 1px solid black;
+            display: flex;
+            align-items: baseline;
+        }
+        .item {
+            background-color: cadetblue;
+            color: whitesmoke;
+            text-align: center;
+            margin: 5px;
+            padding: 2px;
+        }
+        .b-auto {
+            flex-basis: auto;
+        }
+        .f-g-1 {
+            flex-grow: 1;
+        }
+        .f-g-2 {
+            flex-grow: 2;
+        }
+        .b-0 {
+            flex-basis: 0;
+        }
+        .w-100 {
+            flex-basis: 100px;
+        }
+        .b-3 {
+            flex-basis: auto;
+        }
+    </style>
+</head>
+<body>
+    <p>flex-basis:auto</p>
+    <div class="flex-container">
+        <div class="item b-auto f-g-2">A</div>
+        <div class="item b-auto f-g-1">BBB</div>
+        <div class="item b-auto f-g-1">C</div>
+        <div class="item b-auto f-g-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate quas voluptates quibusdam, earum vero deleniti illo esse aut enim eveniet nulla suscipit rem temporibus magnam. Atque dicta laborum quos corrupti?</div>
+    </div>
+    <p>flex-basis:0</p>
+    <div class="flex-container">
+        <div class="item b-0 f-g-1">A</div>
+        <div class="item b-0 f-g-1">BBB</div>
+        <div class="item b-0 f-g-1">C</div>
+        <div class="item b-0 f-g-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate quas voluptates quibusdam, earum vero deleniti illo esse aut enim eveniet nulla suscipit rem temporibus magnam. Atque dicta laborum quos corrupti?</div>
+    </div>
+    <p>flex-basis + width</p>
+    <div class="flex-container">
+        <div class="item w-100 f-g-1">A</div>
+        <div class="item w-100 f-g-1">BBB</div>
+        <div class="item w-100 f-g-1">C</div>
+        <div class="item w-100 f-g-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate quas voluptates quibusdam, earum vero deleniti illo esse aut enim eveniet nulla suscipit rem temporibus magnam. Atque dicta laborum quos corrupti?</div>
+    </div>
+    <p>flex-basis: auto + flex-grow: 2</p>
+    <div class="flex-container">
+        <div class="item b-3 f-g-2">ABCDEF<br>GHIKLM</div>
+        <div class="item b-3 f-g-2">BBB</div>
+        <div class="item b-3 f-g-2">Lorem<p>ipsum</p></div>
+        <div class="item b-3 f-g-2">DEFGHIJKLM</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - align-self</title>
+    <style>
+        .flex-container {
+            display: flex;
+            border: 1px solid black;
+            max-width: 350px;
+            margin-bottom: 10px;
+        }
+        .align-container {
+            align-items: center;
+        }
+        .item {
+            background-color: aqua;
+            text-align: center;
+            margin: 2px;
+            
+            font-size: 24px;
+        }
+        .center {
+            align-self: center;
+        }
+        .start {
+            align-self: flex-start;
+        }
+        .end {
+            align-self: flex-end;
+        }
+        .baseline {
+            align-self: baseline;
+        }
+        .stretch {
+            align-self: stretch;
+        }
+        .direction {
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <h1>Row</h1>
+    <p>align-self: auto</p>
+    <div class="flex-container align-container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
+        <div class="item">D</div>
+    </div>
+    <p>align-self: stretch</p>
+    <div class="flex-container">
+        <div class="item center">A</div>
+        <div class="item start">B</div>
+        <div class="item stretch">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
+        <div class="item end">D</div>
+    </div>
+    <p>align-self: stretch</p>
+    <div class="flex-container">
+        <div class="item center">A</div>
+        <div class="item start">B</div>
+        <div class="item end">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
+    </div>
+    <p>align-self: stretch</p>
+    <div class="flex-container">
+        <div class="item center">A</div>
+        <div class="item start">B</div>
+        <div class="item end">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
+    </div>
+    <h1>Column</h1>
+    <div class="flex-container direction">
+        <div class="item center">A</div>
+        <div class="item start">B</div>
+        <div class="item stretch">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
+        <div class="item end">D</div>
+    </div>
+    <p>align-self: stretch</p>
+    <div class="flex-container direction">
+        <div class="item center">A</div>
+        <div class="item start">B</div>
+        <div class="item end">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
+    </div>
+    <p>align-self: stretch</p>
+    <div class="flex-container direction">
+        <div class="item center">A</div>
+        <div class="item start">B</div>
+        <div class="item end">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
+    </div>
+</body>
+</html>
